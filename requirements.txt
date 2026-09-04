@@ -1,0 +1,22 @@
+# SwarKavach - local prototype requirements
+# Tested conceptually against Python 3.10 / 3.11 on Windows.
+
+# --- inference bridge ---
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+
+# --- audio + ML ---
+torch>=2.1.0
+torchaudio>=2.1.0
+transformers>=4.40.0
+numpy>=1.24.3
+scipy>=1.11.4
+soundfile>=0.12.1
+librosa>=0.10.1
+
+# --- optional: enables REAL speaker verification (SpeechBrain ECAPA-TDNN) ---
+# If this is not installed, or its pretrained weights cannot be downloaded,
+# SwarKavach automatically falls back to "Prototype Speaker Verification"
+# and clearly labels it as such. Install it for the full REAL MODEL demo.
+speechbrain>=0.5.16
